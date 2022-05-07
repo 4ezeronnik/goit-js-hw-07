@@ -32,6 +32,15 @@ function onGalleryContainerClick(evt) {
     return
   }
   console.log(evt.target);
+
+  const galleryEl = evt.target.dataset.source;
+
+  const instance = basicLightbox.create(`
+    <img src="${galleryEl}" width="800" height="600">
+`)
+
+instance.show()
+ 
 }
 
 
