@@ -38,12 +38,23 @@ function onGalleryContainerClick(evt) {
 
   const instance = basicLightbox.create(`
     <img src="${galleryEl}" width="800" height="600">
-`)
+`, {
+    onShow: (instance) => {
+    window.addEventListener('keydown', onCloseModal);
+  },
+
+    onClose: (instance) => {
+      window.addEventListener('keydown', onCloseModal);
+  }
+})
 
   instance.show();
  
 }
 
+function onCloseModal(evt) {
+  if (ev)
+}
 
 
 
