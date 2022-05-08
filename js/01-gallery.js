@@ -40,25 +40,27 @@ function onGalleryContainerClick(evt) {
     <img src="${galleryEl}" width="800" height="600">
 `, {
     onShow: (instance) => {
-    window.addEventListener('keydown', onCloseModal);
-  },
+      window.addEventListener('keydown', onEscapePress);
+    },
 
     onClose: (instance) => {
-      window.addEventListener('keydown', onCloseModal);
+      window.removeEventListener('keydown', onEscapePress);
+  
+    }
+  
+  });
+ function onEscapePress(evt) {
+    if (evt.code === 'Escape') {
+    console.log('evt.code');
+    instance.close();
   }
-})
+}
 
   instance.show();
+
+}
+
  
-}
-
-function onCloseModal(evt) {
-  if (ev)
-}
-
-
-
-
 
 
 
