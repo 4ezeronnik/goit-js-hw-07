@@ -6,7 +6,8 @@ const galleryMarkup = createGalleryMarkup(galleryItems);
 
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
-galleryContainer.addEventListener('click', onGalleryContainerClick)
+galleryContainer.addEventListener('click', onGalleryContainerClick);
+
 
 function createGalleryMarkup(galleryItems) {
   return galleryItems.map(({preview, original, description}) => {
@@ -39,9 +40,16 @@ function onGalleryContainerClick(evt) {
     <img src="${galleryEl}" width="800" height="600">
 `)
 
-instance.show()
+  instance.show();
  
 }
+
+
+
+
+
+
+
 
 
 
